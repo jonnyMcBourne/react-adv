@@ -1,3 +1,4 @@
+import { Suspense } from 'react';
 import {
   BrowserRouter as Router,
   Switch,
@@ -7,7 +8,6 @@ import {
 } from 'react-router-dom';
 import logo from '../logo.svg';
 import {routes} from '../lazyload/router/routes';
-import { Suspense } from 'react';
 
 export const Navigation = () => {
   return (
