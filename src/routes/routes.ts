@@ -1,5 +1,6 @@
-import React,{ lazy } from "react";
+import React from "react";
 import { NoLazy } from '../lazyload/pages';
+import {ShoppingPage} from '../02.-Component-Patterns/pages/ShoppingPage'
 type JSXComponent = ()=> JSX.Element;
 
 interface Route{
@@ -9,14 +10,11 @@ interface Route{
      children?: Route[];
 }
  
-
-
-
 export const routes:Route[] = [
     { 
-        path: '/lazy',
-        Component:lazy(()=> import(/* webpackChunkName: "layout" */ '../lazyload/layout/Layout')),
-        name: 'Lazy page 1'
+        path: '/home',
+        Component: ShoppingPage,
+        name: 'shopping page'
     },
     {
         path:'/',
